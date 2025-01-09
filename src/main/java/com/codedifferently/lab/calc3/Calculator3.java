@@ -1,12 +1,11 @@
 package com.codedifferently.lab.calc3;
 
 public class Calculator3 {
-    public double tax = .05;
-    public double tip = .15;
-
-    public void findTotal(double price){
-        double total = price*(1+tax+tip);
-        System.out.println("$" +total);
+    public void findTotal(double price, double tax, double tip, String name) {
+        double total = price * tip;
+        total *= tax;
+        total = Math.round(total * 100.0) / 100.0;
+        System.out.println(name + " total: $" + total);
 
     }
 }
